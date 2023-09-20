@@ -17,3 +17,4 @@ class City(BaseModel, Base):
     else:
         name = ''
         state_id = ''
+        if os.getenv('HBNB_TYPE_STORAGE') == 'db' else None
