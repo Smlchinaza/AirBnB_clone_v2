@@ -69,7 +69,7 @@ class BaseModel:
         d.pop("_sa_instance_state", None)
         return "[{}] ({}) {}".format(type(self).__name__, self.id, d)
 
-      def delete(self):
+    def delete(self):
         """Deletes this BaseModel instance from the storage"""
         from models import storage
         storage.delete(self)
